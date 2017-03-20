@@ -1,7 +1,7 @@
 <p align="center" >
 <img src="RunLabel.gif" title="RunLabel" float=left>
 </p>
-滚动文字
+
 # 使用方法
 ```
   #import "RunLabel.h"
