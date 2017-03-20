@@ -16,4 +16,6 @@
 /** 需要播放的文字 */
 @property (nonatomic,copy) NSString * text;
 @property (nonatomic,strong)UIColor * color;
+/** Label背景UIView的子类 */
+@property (nonatomic,strong)UIView * labelBackgroundView;
 @end

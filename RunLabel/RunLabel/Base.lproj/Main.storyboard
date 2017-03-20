@@ -23,7 +23,6 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0kZ-vQ-bSr" customClass="RunLabel">
                                 <rect key="frame" x="29" y="32" width="262" height="21"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="LXv-3A-FWw"/>
                                 </constraints>
@@ -31,13 +30,13 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96b-le-Yt4">
                                 <rect key="frame" x="29" y="84" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="addText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9YL-CQ-1gu"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="0kZ-vQ-bSr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="32" id="FNA-iJ-5BD"/>
                             <constraint firstItem="0kZ-vQ-bSr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="29" id="WLg-Fi-wDW"/>

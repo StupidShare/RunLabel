@@ -33,27 +33,25 @@
     self.clipsToBounds = YES;
 }
 
+#pragma mark ----- Geter Method ----
 - (CGFloat)font{
     if (_font == 0.0) {
         _font = 17;
     }
     return _font;
 }
-
 - (CGFloat)duration{
     if (_duration == 0.0) {
         _duration = 5;
     }
     return _duration;
 }
-
 - (UIColor *)color{
     if (!_color) {
         _color = [UIColor blackColor];
     }
     return _color;
 }
-
 - (UILabel *)label{
     if (!_label) {
         CGRect bounds = self.bounds;
@@ -61,6 +59,9 @@
         _label = [[UILabel alloc] initWithFrame:bounds];
         _label.font = [UIFont systemFontOfSize:self.font];
         _label.textColor = self.color;
+        if (self.labelBackgroundView) {
+            [_label addSubview:self.labelBackgroundView];
+        }
         [self addSubview:_label];
     }
     return _label;
@@ -72,6 +73,8 @@
     return _texts;
 }
 
+
+#pragma mark ----- Setter Method ----
 - (void)setText:(NSString *)text{
     _text = text;
     [self.texts addObject:text];
@@ -82,6 +85,7 @@
 
 - (void)startAnimate{
     if (self.texts.count) {
+        self.hidden = NO;
         if ((int)k_LABEL_X == (int)k_SELF_WIDTH) {
             self.label.text = self.texts.firstObject;
             [self.texts removeObject:self.texts.firstObject];
@@ -95,6 +99,7 @@
                 frame.origin.x = -weakSelf.label.frame.size.width;
                 weakSelf.label.frame = frame;
             } completion:^(BOOL finished) {
+                self.hidden = YES;
                 CGRect frame = weakSelf.label.bounds;
                 frame.origin.x = weakSelf.bounds.size.width;
                 weakSelf.label.frame = frame;

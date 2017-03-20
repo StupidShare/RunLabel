@@ -23,6 +23,7 @@
     static int i = 0;
     i++;
     self.runLabel.text = [NSString stringWithFormat:@"添加滚动文字%d",i];
+    
 }
 
 
